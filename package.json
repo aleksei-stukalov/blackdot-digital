@@ -16,5 +16,7 @@
         "url": "https://github.com/yUtopist/black-dot-digital/issues"
     },
     "homepage": "https://github.com/yUtopist/black-dot-digital#readme",
-    "dependencies": {}
+    "dependencies": {
+        "mime-types": "^2.1.35"
+    }
 }

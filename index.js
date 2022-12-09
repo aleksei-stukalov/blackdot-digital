@@ -12,13 +12,7 @@ const server = http.createServer((req, res) => {
     let parsedURL = url.parse(req.url, true);
     //remove the leading and trailing slashes
     let path = parsedURL.path.replace(/^\/+|\/+$/g, "");
-    /**
-     *  /
-     *  /index.html
-     *
-     *  /main.css
-     *  /main.js
-     */
+
     if (path == "") {
         path = "index.html";
     }
@@ -29,24 +23,16 @@ const server = http.createServer((req, res) => {
     fs.readFile(file, function(err, content) {
         if (err) {
             console.log(`File Not Found ${file}`);
+
             res.writeHead(404);
             res.end();
         } else if (path.search(/\.\./) === -1) {
             //specify the content type in the response
             console.log(`Returning ${path}`);
-            res.setHeader("X-Content-Type-Options", "nosniff");
+
             let mime = lookup(path);
+            res.setHeader("X-Content-Type-Options", "nosniff");
             res.writeHead(200, { "Content-type": mime });
-            // switch (path) {
-            //   case "main.css":
-            //     res.writeHead(200, { "Content-type": "text/css" });
-            //     break;
-            //   case "main.js":
-            //     res.writeHead(200, { "Content-type": "application/javascript" });
-            //     break;
-            //   case "index.html":
-            //     res.writeHead(200, { "Content-type": "text/html" });
-            // }
             res.end(content);
         } else {
             res.writeHead(423, { 'Content-Type': 'text/html' });
@@ -55,6 +41,6 @@ const server = http.createServer((req, res) => {
     });
 });
 
-server.listen(1234, "localhost", () => {
+server.listen(8443, "localhost", () => {
     console.log("Listening on port 1234");
 });
