@@ -1,0 +1,22 @@
+{
+    "name": "black-dot-digital",
+    "version": "1.0.0",
+    "description": "Blackdot Digital front page",
+    "main": "index.js",
+    "scripts": {
+        "start": "test"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/yUtopist/black-dot-digital.git"
+    },
+    "author": "Aleksei Stukalov & Dani Sullivan",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/yUtopist/black-dot-digital/issues"
+    },
+    "homepage": "https://github.com/yUtopist/black-dot-digital#readme",
+    "dependencies": {
+        "node-static": "^0.7.11"
+    }
+}
