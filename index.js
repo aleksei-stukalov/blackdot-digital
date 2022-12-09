@@ -20,7 +20,7 @@ const server = http.createServer((req, res) => {
 
     let file = __dirname + "/public/" + path;
     //async read file function uses callback
-    fs.readFile(file, function(err, content) {
+    fs.readFile(file, function (err, content) {
         if (err) {
             console.log(`File Not Found ${file}`);
 
@@ -42,5 +42,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(8443, "localhost", () => {
-    console.log("Listening on port 1234");
+    console.log("Listening on port 8443");
 });
