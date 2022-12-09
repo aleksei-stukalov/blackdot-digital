@@ -10,10 +10,12 @@ const server = http.createServer((req, res) => {
     if (path === '') {
         path = 'index.html';
     }
+    // Some logic to Log the request with the IP of the user and the url,
+    // maybe used for 'invite' links.
     console.log(`Requested path ${path} `);
 
     let file = __dirname + '/public/' + path;
-    fs.readFile(file, function(err, content) {
+    fs.readFile(file, function (err, content) {
         if (err) {
             console.log(`File Not Found ${file}`);
             res.writeHead(404);
@@ -26,6 +28,9 @@ const server = http.createServer((req, res) => {
                     res.writeHead(200, { 'Content-type': 'text/html' });
                     break;
                 case 'static/styles.css':
+                    res.writeHead(200, { 'Content-type': 'text/css' });
+                    break;
+                case 'static/script.js':
                     res.writeHead(200, { 'Content-type': 'text/css' });
                     break;
                 default:
