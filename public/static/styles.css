@@ -1,121 +1,135 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
 * {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    box-shadow: none;
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	box-shadow: none;
 }
 
 :root {
-    --font-family-main: 'Montserrat', sans-serif;
-    --font-size-h1: 2.4rem;
-    --font-size-h2: 1.2rem;
-    --font-weight-xs: 100;
-    --font-weight-s: 200;
-    --font-weight-m: 300;
-    --font-weight-l: 400;
-    --font-weight-xl: 500;
+	--font-family-main: 'Montserrat', sans-serif;
+	--font-size-h1: 2.4rem;
+	--font-size-h2: 1.2rem;
+	--font-weight-xs: 100;
+	--font-weight-s: 200;
+	--font-weight-m: 300;
+	--font-weight-l: 400;
+	--font-weight-xl: 500;
+	--vh: 100vh; /* Change this before production, for browsers that do not support Custom Properties */
 }
 
 body {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 0.5rem;
-    color: white;
-    background-color: black;
+	width: 100%;
+	height: auto;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	color: white;
+	background-color: black;
 }
 
-body>h1 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    font-family: var(--font-family-main);
-    font-weight: var(--font-weight-m);
-    font-size: var(--font-size-h1);
-    letter-spacing: .1rem;
+#hero {
+	width: 100%;
+	height: var(--vh);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	background-color: red;
 }
 
-body>h1:after {
-    content: '';
-    bottom: -0.2rem;
-    position: absolute;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(270deg, #00ffbd, #ff9000, #00d5ff);
-    background-size: 600% 600%;
-    -webkit-animation: AnimationName 30s ease infinite;
-    -moz-animation: AnimationName 30s ease infinite;
-    -o-animation: AnimationName 30s ease infinite;
-    animation: AnimationName 30s ease infinite;
+#hero > h1 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: var(--font-family-main);
+	font-weight: var(--font-weight-m);
+	font-size: var(--font-size-h1);
+	letter-spacing: 0.1rem;
 }
 
-body>h2 {
-    font-family: var(--font-family-main);
-    font-weight: var(--font-weight-m);
-    font-size: var(--font-size-h2);
-    text-transform: uppercase;
-    letter-spacing: .08rem;
+#hero > h1:after {
+	content: '';
+	bottom: -0.2rem;
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	background: linear-gradient(270deg, #00ffbd, #ff9000, #00d5ff);
+	background-size: 600% 600%;
+	-webkit-animation: AnimationName 30s ease infinite;
+	-moz-animation: AnimationName 30s ease infinite;
+	-o-animation: AnimationName 30s ease infinite;
+	animation: AnimationName 30s ease infinite;
+}
+
+body > h2 {
+	font-family: var(--font-family-main);
+	font-weight: var(--font-weight-m);
+	font-size: var(--font-size-h2);
+	text-transform: uppercase;
+	letter-spacing: 0.08rem;
 }
 
 .contacts {
-    position: absolute;
-    bottom: 10rem;
-    font-family: var(--font-family-main);
-    font-weight: var(--font-weight-m);
-    font-size: var(--font-size-h2);
-    letter-spacing: .08rem;
+	position: absolute;
+	bottom: 10rem;
+	font-family: var(--font-family-main);
+	font-weight: var(--font-weight-m);
+	font-size: var(--font-size-h2);
+	letter-spacing: 0.08rem;
 }
 
 @-webkit-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @-moz-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @-o-keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
 
 @keyframes AnimationName {
-    0% {
-        background-position: 0% 50%
-    }
-    50% {
-        background-position: 100% 50%
-    }
-    100% {
-        background-position: 0% 50%
-    }
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }
