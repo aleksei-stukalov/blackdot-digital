@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap');
+@import url('./animation.css');
 * {
 	padding: 0;
 	margin: 0;
+
 	list-style: none;
 	box-shadow: none;
+	text-decoration: none;
 }
 
 :root {
 	--font-family-main: 'Montserrat', sans-serif;
 	--font-size-xl: 2.4rem;
+	--font-size-l: 1.8rem;
 	--font-size-m: 1.2rem;
 	--font-weight-xs: 100;
 	--font-weight-s: 200;
@@ -24,10 +28,12 @@
 body {
 	width: 100%;
 	height: auto;
+
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
+
 	color: white;
 	background-color: black;
 }
@@ -70,73 +76,32 @@ body {
 
 	flex: 1;
 	display: flex;
-	justify-content: center;
+	align-items: center;
 }
 
 #hero > h1 {
-	font-size: var(--font-size-xl);
+	margin-bottom: 0.4rem;
+
+	font-size: var(--font-size-l);
 	letter-spacing: 0.1rem;
+
 	align-items: flex-end;
 }
 
 #hero > h2 {
+	margin-top: 0.5rem;
+
 	font-size: var(--font-size-m);
-	text-transform: uppercase;
 	letter-spacing: 0.08rem;
+	text-transform: lowercase;
+
 	align-items: flex-start;
 }
 
 .contacts {
 	position: absolute;
 	bottom: 10rem;
+
 	font-size: var(--font-size-h2);
 	letter-spacing: 0.08rem;
-}
-
-@-webkit-keyframes GradientAnimation {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-@-moz-keyframes GradientAnimation {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-@-o-keyframes GradientAnimation {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
-@keyframes GradientAnimation {
-	0% {
-		background-position: 0% 50%;
-	}
-	50% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
 }
