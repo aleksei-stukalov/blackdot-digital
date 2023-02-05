@@ -107,13 +107,31 @@ main {
   align-items: flex-start;
   flex-direction: column;
 }
+@media only screen and (min-width: 1260px) {
+  .hero {
+    justify-content: center;
+    align-items: center;
+  }
+}
 .hero > * {
+  position: relative;
   margin-left: var(--margin-horizontal);
 }
+@media only screen and (min-width: 1260px) {
+  .hero > * {
+    margin: 0;
+  }
+}
 .hero .hero__title {
-  position: relative;
   width: calc(100% - var(--margin-horizontal));
   margin-top: 33dvh;
+}
+@media only screen and (min-width: 1260px) {
+  .hero .hero__title {
+    width: 100%;
+    margin-top: 45vh;
+    text-align: center;
+  }
 }
 .hero .hero__title::after {
   height: 2px;
