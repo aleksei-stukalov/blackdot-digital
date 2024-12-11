@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  text-decoration: none;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --margin-horizontal: 3rem;
+  --margin-vertical: 5rem;
+  --spacing-l: 4.8rem;
+  --spacing-m: .5rem;
+  --spacing-s: .2rem;
+  --font-size-xxl: 2.1rem;
+  --font-size-xl: 1.8rem;
+  --font-size-l: 1.2rem;
+  --font-size-m: 1rem;
+  --font-size-s: .9rem;
+  --font-size-xs: .75rem;
+  --font-weight-l: 400;
+  --font-weight-m: 300;
+  --font-weight-s: 100;
+  --color-scheme: #393E46;
+  --color-accent: #EBF2FA;
+  touch-action: pan-x pan-y;
+
+  --font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-m);
+  line-height: 1;
+}
+
+h2 {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-s);
+  line-height: 1;
+}
+
+h3 {
+  font-size: var(--font-size-l);
+  font-weight: var(--font-weight-s);
+  line-height: 1;
+}
+
+h4 {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-s);
+  line-height: 1;
+}
+
+h5 {
+  letter-spacing: .05rem;
+  font-size: var(--font-size-s);
+  font-weight: var(--font-weight-m);
+  line-height: 1;
+}
+
+h6 {
+  font-size: var(--font-size-xs);
+  font-weight: var(--font-weight-m);
+  line-height: 1;
+}
+
+p {
+  font-size: var(--font-size-m);
+  font-weight: var(--font-weight-m);
+  line-height: 1.1;
+}
+
+// h1, h2, h3, h4, h5, h6, p {
+//   padding: .2rem 0;
+// }
+
+a, a:active, a:focus, a:hover {
+  color: var(--color-accent);
+}

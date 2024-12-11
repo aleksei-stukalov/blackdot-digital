@@ -1,0 +1,56 @@
+$tiny: calc(25rem - 1px);         // 400px
+$mobile-min: 25rem;               // 400px
+$mobile-max: calc(30rem - 1px);   // 480px - 1px
+$tablet-min: 30rem;               // 480px
+$tablet-max: calc(60rem - 1px);   // 960px - 1px
+$laptop: 60rem;                   // 960px
+$desktop: 85rem;                  // 1200px
+$widescreen: 110rem;              // 1760px
+
+@mixin tiny {
+  @media screen and (max-width: $tiny) {
+    @content;
+  }
+}
+
+// If we want to use specifically for mobile
+@mixin mobile {
+  @media screen and (max-width: $mobile-max) {
+    @content;
+  }
+}
+
+// If we want to use specifically for tablet
+@mixin tablet {
+  @media screen and (min-width: $tablet-min) and (max-width: $tablet-max) {
+    @content;
+  }
+}
+
+// If we want to use specifically for both mobile and tablet
+@mixin handheld {
+  @media screen and (max-width: $tablet-max) {
+    @content;
+  }
+}
+
+// Laptop and up
+@mixin laptop {
+  @media screen and (min-width: $laptop) {
+    @content;
+  }
+}
+
+// Desktop and up
+@mixin desktop {
+  @media screen and (min-width: $desktop) {
+    @content;
+  }
+}
+
+// Widescreen and up
+@mixin widescreen {
+  @media screen and (min-width: $widescreen) {
+    @content;
+  }
+}
