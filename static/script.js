@@ -1,8 +1,29 @@
-const d = document
+const heroShapes = [
+  '#hero-shape-alpha',
+  '#hero-shape-beta',
+  '#hero-shape-zero',
+];
+
+let heroCurrentShape = 0;
+function createAnimation(startingPathID) {
+  return KUTE.to(
+    startingPathID,
+    { path: heroShapes[heroCurrentShape] },
+    {
+      duration: 6000,
+      easing: 'easingCubicInOut',
+      onComplete: () => {
+        heroCurrentShape = (heroCurrentShape + 1) % heroShapes.length;
+        createAnimation('#hero-shape').start();
+      },
+    }
+  );
+}
+
+const heroShape = createAnimation('#hero-shape').start();
 
 // Listener to check the hights of the vieport
 // change of the css variable to represent vh
-
 
 //Testing
 // window.addEventListener('resize', () => {
